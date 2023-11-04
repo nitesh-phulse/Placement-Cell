@@ -1,4 +1,4 @@
-# Placement-Cell
+# Placement-Cell (CampusPro)
 
 
 Welcome to the README for our web application designed to manage student placement data. This application is built on Node.js and Express, and it employs MongoDB as the underlying database. It's a powerful tool that encompasses various features related to student information, interviews, results, and job listings.

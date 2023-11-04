@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to an external stylesheet for styling -->
+    <link rel="stylesheet" href="/css/result.css">
+</head>
+
+<body>
+     <!-- Navigation bar -->
+    <nav>
+        <a href="/student/interview_list">Interview List</a>
+
+        <a class="logo">CampusPro</a>
+    </nav>
+     <!-- Main content section for updating interview results -->
+    <section>
+        <h1>Result Update</h1>
+        <div>
+            <!-- Table to display the results -->
+            <table>
+                <tr>
+                    <th>CompanyName</th>
+                    <th>StudentName</th>
+                    <th>Email</th>
+                    <th>Result</th>
+                </tr>
+                <!-- Loop through companyResult data and generate table rows -->
+                <% for(var i=0 ; i<companyResult.students.length ; i++ ) { %>
+                    <tr>
+                        <td><%= companyResult.companyName %></td>
+                        <td><%= companyResult.students[i].name %></td>
+                        <td><%= companyResult.students[i].email %></td>
+                        <td>
+                            <!-- Check if the result exists for this student -->
+                            <% if(companyResult.result.indexOf(companyResult.students[i].id) == -1) { %>
+                                  <!-- Form to update the result -->
+                                <form action="/result/update" method="POST">
+                                    <input type="text" name="result" placeholder="Update Result" required="true">
+                                    <input type="hidden" name="interviewId" value="<%= companyResult.id %>">
+                                    <input type="hidden" name="studentId" value="<%= companyResult.students[i].id %>">
+                                    <button>Update</button>
+                                </form>
+                            <% } else { %>
+                                <!-- Display "Updated" if the result is already recorded -->
+                                <button>Updated</button>
+                            <% } %>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>

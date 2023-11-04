@@ -1,0 +1,117 @@
+/* Set the background color and width for the body */
+body {
+    background-color: rgb(251, 251, 251);
+    width: 97%;
+}
+
+/* Style the navigation bar */
+nav {
+    padding: 15px;
+    background-color: rgb(3, 45, 107);
+    margin-top: -1%;
+    width: 100%;
+    position: fixed;
+}
+
+/* Style the hover effect for navigation links */
+
+
+/* Style the navigation links */
+a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* Style the heading */
+#heading {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    height: 15%;
+    width: 90%;
+    padding: 2%;
+    font-family: cursive;
+    font-size: 30px;
+    background-color: rgb(101, 85, 120);
+    color: white;
+    display: inline-block;
+}
+
+/* Style the content section */
+section {
+    margin-left: 10%;
+}
+
+/* Style the apply link */
+#apply {
+    text-decoration: none;
+}
+
+/* Style the opportunity content */
+#apportunity {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+/* Style the card content */
+#card_content {
+    display: flex;
+    padding: 10px;
+    margin-top: 5%;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Style the company name */
+#companyName {
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: 100;
+    color: rgb(255, 167, 189);
+}
+
+/* Style the company logo image */
+#image {
+    margin: 10px;
+}
+
+/* Style the paragraph text */
+p {
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+/* Style the content block */
+#content {
+    margin: 10px;
+}
+
+/* Style the spans with color information */
+span {
+    padding: 5px;
+    color: grey;
+}
+
+/* Style the details section */
+#details > div {
+    padding: 5px;
+}
+
+/* Style the button to apply */
+#button_to_apply {
+    padding-right: 15%;
+}
+
+/* Style the apply button */
+button {
+    font-size: 25px;
+    padding: 5px;
+    width: 150%;
+    border-radius: 41%;
+    border: 1px solid white;
+    background-color: grey;
+}

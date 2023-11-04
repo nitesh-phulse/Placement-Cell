@@ -1,0 +1,30 @@
+/* Update the body width */
+body {
+    width: 100%; /* Adjusted to 100% */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #032D6B; /* Dark blue background */
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Style navigation links */
+nav a {
+    padding: 15px 30px; /* Increased padding for better click area */
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: border-bottom 0.3s, padding-bottom 0.3s; /* Smooth transition for the border and padding */
+}
+
+/* Style the hover effect for navigation links */
+

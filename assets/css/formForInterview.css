@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Apply a light background color to the entire page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 20.5%, rgba(75,68,224,0.74) 58.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
+  }
+  /* Style the fixed navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 9px;
+    border-radius: 0px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);  
+    
+}
+
+/* Style the navigation links */
+nav a {
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 0;
+    text-decoration: none;
+}
+
+/* Style the navigation links on hover */
+nav a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+  }
+
+  nav a:hover:before{
+    width: 100%;
+  }
+  nav a.center a:before{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  nav a.upward a:before{
+    width: 100%;
+    bottom: -5px;
+    opacity: 0;
+  }
+  nav a.upward a:hover:before{
+    bottom: 0px;
+    opacity: 1;
+  }
+  nav a.forward a:before{
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+  }
+  nav a.forward a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .logo {
+    font-size: 38px;
+    font-weight: bold;
+    margin-left: 38%;
+    background: linear-gradient( 109.5deg,  rgba(31,212,248,1) 13%, rgba(218,15,183,1) 74.9% );
+    -webkit-background-clip: text; /* For Webkit browsers */
+    background-clip: text;
+    color: transparent; /* Make the text transparent */
+  }
+
+/* Style the content section with a centered layout */
+section {
+    text-align: center;
+    padding: 70px;
+    width: 50%;
+    margin-left: 1%;
+    background-color: #ffffff48; /* Light gray background */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(114, 114, 114, 0.1); /* Add a subtle shadow */
+}
+
+/* Style the page title with an oblique font style */
+h1 {
+    font-style: none;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5%;
+    color: #333; /* Dark gray text color */
+}
+
+/* Style input fields with a light border and focus effect */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 300;
+    border: 2px ; /* Light gray border */
+    border-radius: 25px;
+    background-color: #ffffff48;
+    box-shadow: 0 4px 6px rgba(114, 114, 114, 0.1); /* Add a subtle shadow */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue box shadow on focus */
+}
+
+/* Style the submit button with a dark background and white text */
+button {
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Style the submit button on hover with a darker background */
+button:hover {
+    background-color: #29033a; /* Slightly darker background on hover */
+}

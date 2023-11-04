@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company List</title>
+    <link rel="stylesheet" href="/css/interview.css">
+</head>
+<body>
+     <!-- Navigation bar -->
+    <nav>
+        <a href="/employee/dashboard">Home</a>
+
+        <a class="logo">CampusPro</a>
+    </nav>
+    <!-- Main content section for displaying a list of companies -->
+    <section>
+        <h1>Company List</h1>
+        <div>
+            <!-- Table to display the list of companies -->
+            <table>
+                <tr>
+                    <th>S No.</th>
+                    <th>Company Name</th>
+                    <th>Action</th>
+                </tr>
+                <% for (var i = 0; i < interview_list.length; i++) { %>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><%= interview_list[i].companyName %></td>
+                    <td>
+                         <!-- Button to mark results for the company's interviews -->
+                        <button>
+                            <a href="/result/<%= interview_list[i].id %>">Mark Result</a>
+                        </button>
+                    </td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

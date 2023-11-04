@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/signUp.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Sign In</a>
+
+        <a class="logo">CampusPro</a>
+    </nav>
+    <section class="signup-container">
+        <h1>Create an Account</h1>
+        <form id="form" action="/create_session" method="POST">
+            <div class="input-group">
+                <% if (firstNameError != null) { %>
+                <small class="error-message"><%- firstNameError %></small>
+                <% } %>
+                <input id="firstname" type="text" name="firstname" placeholder="First Name">
+            </div>
+
+            <div class="input-group">
+                <% if (lastNameError != null) { %>
+                <small class="error-message"><%- lastNameError %></small>
+                <% } %>
+                <input id="lastname" type="text" name="lastname" placeholder="Last Name">
+            </div>
+
+            <div class="input-group">
+                <% if (emailError != null) { %>
+                <small class="error-message"><%- emailError %></small>
+                <% } %>
+                <input id="email" type="text" name="email" placeholder="Email">
+            </div>
+
+            <div class="input-group">
+                <% if (passwordError != null) { %>
+                <small class="error-message"><%- passwordError %></small>
+                <% } %>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </div>
+
+            <button id="submit-button" type="submit">
+                </i> Submit
+            </button>        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allocate Student To An Interview</title>
+    <!-- Link to an external stylesheet for styling -->
+    <link rel="stylesheet" href="/css/formForInterview.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="/employee/dashboard">Home</a>
+
+        <a class="logo">CampusPro</a>
+    </nav>
+<!-- Main content section for allocating a student to an interview -->
+    <section>
+        <h1>Allocate Student To An Interview</h1>
+        <!-- Form for allocating a student to an interview, sending data via POST method -->
+        <form action="/student/interview_allocation" method="POST">
+            <div class="form-group">
+                <!-- Input for company name -->
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" name="companyName" placeholder="Enter Company Name" required>
+            </div>
+
+            <div class="form-group">
+                 <!-- Input for date of interview -->
+                <label for="date">Date Of Interview</label>
+                <input type="date" id="date" name="date" placeholder="Enter Date Of Interview" required>
+            </div>
+
+             <!-- Hidden input for student ID -->
+            <input type="hidden" id="studentID" name="studentID" value="<%= id %>">
+            <!-- Submit button to allocate the student to the interview -->
+            <button id="button" type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>

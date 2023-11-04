@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/image/logo.png">
+    <link rel="stylesheet" href="/css/placement.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/employee/dashboard">Home</a>
+        <a href="/placement">Placement</a>
+    </nav>
+    <!-- content -->
+    <section>
+        <div id="heading">
+            <h1>Introducing Placement Cell</h1>
+        </div>
+
+        <% for(var i=0 ; i< body.length ; i++) { %>
+            <div class="card">
+                <!-- part1 -->
+                <div class="opportunity">
+                    <!-- part2 -->
+                    <div class="image"><img src="<%= body[i].company_logo %>"></div>
+                    <div class="content">
+                        <p><%= body[i].title %></p>
+                        <p id="companyName"><%= body[i].company_name %></p>
+                        <div class="details">
+                            <div>
+                                <span>JobType &nbsp;</span>
+                                <%= body[i].job_type %>
+                                <span>Application Publication &nbsp;</span>
+                                <%= body[i].publication_date %>
+                            </div>
+                            <div>
+                                <span>Location &nbsp;</span>
+                                <%= body[i].candidate_required_location %>
+                                <% if(body[i].salary.length > 0) { %>
+                                    <span>Salary &nbsp;</span>
+                                    <%= body[i].salary %>
+                                <% } else { %>
+                                    <span>Salary &nbsp;</span> candidate performance in Interview
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button_to_apply">
+                    <button><a id="apply" href="<%= body[i].url %>" target="_blank">Apply</a></button>
+                </div>
+            </div>
+        <% } %>
+    </section>
+</body>
+
+</html>

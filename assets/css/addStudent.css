@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* Apply a background color to the entire page */
+body {
+  background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 20.5%, rgba(75,68,224,0.74) 58.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
+
+  }
+  
+
+  
+  /* Style the navigation bar */
+  nav {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 5px;
+    border-radius: 0px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);  
+    
+}
+  
+  /* Style the navigation links */
+  nav a {
+    list-style: none;
+    margin: 0 30px;
+    position: relative;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 7px 0;
+    text-decoration: none;
+}
+
+  
+  
+ /* Style the navigation links on hover */
+nav a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+nav a:hover:before{
+  width: 100%;
+}
+nav a.center a:before{
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav a.upward a:before{
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+nav a.upward a:hover:before{
+  bottom: 0px;
+  opacity: 1;
+}
+nav a.forward a:before{
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+nav a.forward a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Style the logo */
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+  margin-left: 38%;
+  background: linear-gradient( 109.5deg,  rgba(31,212,248,1) 13%, rgba(218,15,183,1) 74.9% );
+  -webkit-background-clip: text; /* For Webkit browsers */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+}
+
+  /* Style the page title */
+  h1 {
+    margin: 3% 600px; /* Add spacing above and below */
+    align-items: center;
+    padding: 10px; /* Increase padding for emphasis */
+    font-size: 32px; /* Larger font size */
+    color: #080808; /* Dark text color */
+  }
+  
+    /* Center the content and add some spacing */
+    section {
+      align-content: center;
+    margin: 5%;
+    margin-left: 10%;
+    background-color: #ffffff48; /* Light gray background */ /* Semi-transparent white background */
+    padding: 6px;
+    width: fit-content;
+    border: 0px solid #e0e0e0;
+    border-radius: 40px;
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    box-shadow: 0 4px 6px rgba(114, 114, 114, 0.1); /* Add a subtle shadow */
+    }
+
+  /* Style the input fields */
+  input {
+    width: 70%;
+    align-items: center;
+    padding: 10px 15px 10px 10px;
+    margin: 10px 200px; /* Add vertical margin */
+    font-size: 16px;
+    border: 2px; /* Light gray border */
+    border-radius: 25px; /* Add some border radius */
+    background-color: #ffffff48;
+    box-shadow: 0 4px 6px rgba(114, 114, 114, 0.1); /* Add a subtle shadow */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    
+  }
+  
+  /* Style the input fields on focus */
+  input:focus {
+    outline: none;
+    border: 2px solid #0015ff; /* Blue border on focus */
+    box-shadow: 0 0 10px #007bff; /* Add a subtle shadow */
+  }
+  
+  /* Style the buttons */
+  button {
+    width: 23%;
+    padding: 10px;
+    font-size: 27px;
+    margin: 1%;
+    margin-left: 35%;
+    background-color: #333; 
+    color: #fff;
+    border: 1px;
+    border-radius: 30px;
+    cursor: pointer; /* Add a pointer cursor on hover */
+   
+  }
+  
+  /* Style the buttons on hover */
+  button:hover {
+    background-color: #29033a; /* Darker background color on hover */
+  }

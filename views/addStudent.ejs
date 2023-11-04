@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/addStudent.css">
+ <!-- Navigation bar -->
+<nav>
+<a href="/employee/dashboard">Home</a>
+<!-- Project logo -->
+<a class="logo">CampusPro</a>
+</nav>
+<!-- Main content section for adding a new student -->
+<section>
+    <h1>Add New Student </h1>
+     <!-- Form for adding a new student, sending data via POST method -->
+<form action="/employee/addstudent" method="POST">
+     <!-- Input fields for student information -->
+    <input id="batch" type="text" name="batch" placeholder="Batch Details" required><br>
+    <input id="name" type="text" name="name" placeholder="Student Name" required><br>
+    <input id="email" type="text" name="email" placeholder="example@email.com" required><br>
+    <input id="college" type="text" name="college" placeholder="college" required><br>
+    <input id="status" type="text" name="status" placeholder="status" required><br>
+    <input id="DSA_FinalScore" type="text" name="DSA_FinalScore" placeholder="DSA Score" required><br>
+    <input id="WebD_FinalScore" type="text" name="WebD_FinalScore" placeholder="WebD Score" required><br>
+    <input id="React_FinalScore" type="text" name="React_FinalScore" placeholder="React_FinalScore" required><br>
+     <!-- Submit button to add the new student -->
+    <button>Submit</button>
+
+</form>
+</section>

@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 async function connectToMongoDB() {
   try {
     // Attempt to connect to a MongoDB database using the given connection string.
-    await mongoose.connect('mongodb+srv://niteshphulse4:nitesh7090@cluster0.z7dd9ys.mongodb.net/placementcell?retryWrites=true&w=majority');
+    await mongoose.connect('mongodb+srv://niteshphulse4:nxyasfhaja@cluster0.z7dd9ys.mongodb.net/placementcell?retryWrites=true&w=majority');
     
     // If the connection is successful, log a success message.
     console.log('MongoDB connection successful!!');
